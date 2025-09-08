@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Earth</title>
+  <link rel="shortcut icon" href="./assets/sprout.png" type="image/x-icon">
   <!-- tailwind and daisy UI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -12,6 +13,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font hind siliguri -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .font-bangla{
+    font-family: "Hind Siliguri", sans-serif;
+  }
+  .active{
+    background-color: #15803D;
+    color: white;
+  }
+</style>
 </head>
 
 <body>
@@ -68,8 +83,39 @@
       </div>
     </div>
   </header>
-  <main class="bg-[#effff5]">
-    <section></section>
+  <main class="bg-[#f0fef5]">
+    <section class="container mx-auto px-3 md:px-0 pt-14 md:pt-24">
+      <h2 class="font-semibold text-2xl text-[#1F2937] text-center mb-6 md:mb-10">Choose Your Trees</h2>
+
+     
+      <!-- grid section -->
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-5 mb-14 md:mb-24 ">
+  
+      <aside class="col-span-1">
+        <h3 class="font-semibold text-black text-xl pb-4">Catagories</h3>
+        <div  id="categories-container">
+          <!-- categories button on displayCategories() -->
+        </div>
+      </aside>
+
+      <section class="md:col-start-2 md:col-end-6">
+         <!-- spinner -->
+       <section id="spinner" class="flex justify-center items-center pt-2 pb-5 hidden">
+      <span class="loading loading-dots loading-xl"></span>
+    </section>
+
+        <!-- md:h-[460px] md:overflow-y-scroll to plant container -->
+        <div  id="plants-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+      <!-- displayCategoriesPlants() -->
+        </div>
+      </section>
+
+      <aside id="cart" class="col-span-1 border h-72">
+        <h3 class="font-semibold text-black text-xl">Your Cart</h3>
+      </aside>
+
+    </div>
+    </section>
 
 
     <section class="container mx-auto grid grid-cols-1 md:grid-cols-5 px-3 md:px-0 my-14 md:my-24 ">
@@ -132,10 +178,13 @@
         <input class="btn btn-primary shadow-none border-none bg-[#FACC15] text-[#15803D] hover:bg-[#fdd431] rounded-3xl w-full mb-0" type="submit" value="Donate Now">
       </form>
     </section>
-    <footer class="bg-[#14532D] text-center text-white py-6 px-2 md:px-0 mt-0 border border-[#14532D] outline-[#14532D]" >
+    <footer class="bg-[#14532D] text-center text-white py-6 px-2 md:px-0 m-0 h-full border border-[#14532D] outline-[#14532D]" >
      <span> © 2025 Green Earth. All Rights Reserved.</span>
     </footer>
   </main>
+
+  <!-- js file -->
+   <script src="./script.js"></script>
 </body>
 
 </html>
